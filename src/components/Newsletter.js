@@ -1,26 +1,27 @@
 import { useState } from "react";
 import { Col, Row, Card, Container } from "react-bootstrap";
-import hi from "../assets/img/banner-bg.png";
-
+import hi from "../assets/img/blog1.jpg";
+import hi2 from "../assets/img/blog2.jpeg";
+import hi3 from "../assets/img/blog3.jpeg";
 // Static blog data
 const blogs = [
   {
-    title: "The Future of Technology",
-    description: "AI and automation are revolutionizing industries.",
+    title: "TIn the blink of an eye: The intersection of time, travel, and technology.",
+    description: "Do you know time, travel, and technology are no longer separate concepts?",
     image: hi,
-    link: "#",
+    link: "https://medium.com/@hasini.miryala7585/in-the-blink-of-an-eye-the-intersection-of-time-travel-and-technology-6080e63b6769",
   },
   {
-    title: "Top 10 Travel Destinations",
-    description: "Explore breathtaking locations worldwide.",
-    image: "https://via.placeholder.com/300",
-    link: "#",
+    title: "CSS Backgrounds",
+    description: "let us know a clear picture of CSS backgrounds",
+    image: hi2,
+    link: "https://medium.com/@hasini.miryala7585/css-backgrounds-aa8395875c8b",
   },
   {
-    title: "Mastering Productivity",
-    description: "Proven techniques to stay organized and focused.",
-    image: "https://via.placeholder.com/300",
-    link: "#",
+    title: "Why Learning New Skills is a Game-Changer in the IT Industry? ",
+    description: "If you’re thinking about a career in IT, here’s something you need to know",
+    image: hi3,
+    link: "https://medium.com/@hasini.miryala7585/why-learning-new-skills-is-a-game-changer-in-the-it-industry-e6a5e65968a4",
   },
 ];
 

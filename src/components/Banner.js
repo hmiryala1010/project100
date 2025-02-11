@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.svg";
+// import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/hey.jpg";
+
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -11,7 +13,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [   "Full Stack Developer"  ];
   const period = 2000;
 
   useEffect(() => {
@@ -56,19 +58,29 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Judy`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                <h1>{`Hi! I'm Hasini`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Engineer", "full stack developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>I am a passionate full-stack developer, specializing in Java, JavaScript, and MERN stack. With hands-on experience in React, Node.js, and Spring Boot. I am eager to contribute my technical expertise and collaborate with dynamic teams to build impactful solutions.</p>
+                  {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
               </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
+          <TrackVisibility>
+  {({ isVisible }) =>
+    <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+      <img 
+        src={headerImg} 
+        alt="Header Img" 
+        style={{
+          borderRadius: '50%', 
+          width: '270px', 
+          height: '270px', 
+          objectFit: 'cover'
+        }} 
+      />
+    </div>}
+</TrackVisibility>
+
           </Col>
         </Row>
       </Container>

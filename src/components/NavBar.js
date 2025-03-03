@@ -11,9 +11,9 @@ import {
 } from "react-router-dom";
 
 export const NavBar = () => {
-
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false); // Added for responsive toggle
 
   useEffect(() => {
     const onScroll = () => {
@@ -22,25 +22,26 @@ export const NavBar = () => {
       } else {
         setScrolled(false);
       }
-    }
+    };
 
     window.addEventListener("scroll", onScroll);
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, [])
+  }, []);
 
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
-  }
+    setExpanded(false); // Close navbar on link click (for mobile)
+  };
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
+      <Navbar expand="md" className={scrolled ? "scrolled" : ""} expanded={expanded}>
         <Container>
           <Navbar.Brand href="/">
             {/* <img src={logo} alt="Logo" /> */}
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)}>
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
@@ -55,7 +56,7 @@ export const NavBar = () => {
                 <a href="https://medium.com/@hasini.miryala7585"><img src={navIcon2} alt="" /></a>
                 <a href="https://github.com/hmiryala1010"><img src={navIcon4} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
+              <HashLink to='#connect' onClick={() => setExpanded(false)}>
                 <button className="vvd"><span>Let’s Connect</span></button>
               </HashLink>
               {/* Download Resume Button */}
@@ -67,5 +68,5 @@ export const NavBar = () => {
         </Container>
       </Navbar>
     </Router>
-  )
-}
+  );
+};

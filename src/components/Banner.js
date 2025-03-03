@@ -74,7 +74,7 @@ export const Banner = () => {
         style={{
           borderRadius: '50%', 
           width: '270px', 
-          height: '270px', 
+          height: '220px', 
           objectFit: 'cover'
         }} 
       />

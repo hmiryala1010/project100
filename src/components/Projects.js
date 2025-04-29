@@ -2,7 +2,7 @@ import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/spotify.png";
 import projImg2 from "../assets/img/taskmaster.png";
-import projImg3 from "../assets/img/storycolab.png";
+import projImg3 from "../assets/img/maileazy.png";
 import projImg4 from "../assets/img/toursandtravel.png";
 import projImg5 from "../assets/img/carrentals.png";
 import projImg6 from "../assets/img/dreamdestiny.png";
@@ -12,15 +12,15 @@ import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
   const projectsTab1 = [
-    { title: "Spotify Template", description: "Frontend", imgUrl: projImg1, link: "https://spotify-template.netlify.app/" },
-    { title: "TaskMaster", description: "Java Full Stack", imgUrl: projImg2, link: "https://github.com/hmiryala1010/TASKMASTER" },
-    { title: "Story Collab", description: "MERN Stack", imgUrl: projImg3, link: "https://makeyummytime.netlify.app" },
+    { title: "Spotify Template", description: "Frontend", imgUrl: projImg1, link: "https://spotify-template.netlify.app/", projectRoute: "spotify-template" },
+    { title: "TaskMaster", description: "Java Full Stack", imgUrl: projImg2, link: "https://github.com/hmiryala1010/TASKMASTER", projectRoute: "taskmaster" },
+    { title: "Mail Eazy", description: "MERN Stack", imgUrl: projImg3, link: "https://maileazy.com/home", projectRoute: "story-collab" },
   ];
 
   const projectsTab2 = [
-    { title: "Tours and Travels", description: "Frontend", imgUrl: projImg4, link: "https://tours-and-travels-by-hasinimiryala.netlify.app/" },
-    { title: "Car Rental System", description: "Frontend", imgUrl: projImg5, link: "https://carrentals-by-hasinimiryala.netlify.app/" },
-    { title: "Dream Destiny", description: "MERN FullStack", imgUrl: projImg6, link: "https://dream-destiny.netlify.app/" },
+    { title: "Tours and Travels", description: "Frontend", imgUrl: projImg4, link: "https://tours-and-travels-by-hasinimiryala.netlify.app/", projectRoute: "tours-and-travels" },
+    { title: "Car Rental System", description: "Frontend", imgUrl: projImg5, link: "https://carrentals-by-hasinimiryala.netlify.app/", projectRoute: "car-rentals" },
+    { title: "Dream Destiny", description: "MERN FullStack", imgUrl: projImg6, link: "https://dream-destiny.netlify.app/", projectRoute: "dream-destiny" },
   ];
 
   return (
